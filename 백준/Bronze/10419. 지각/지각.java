@@ -1,0 +1,25 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Main {
+	
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int T = Integer.parseInt(br.readLine());
+		
+		for(int i = 0; i < T; i++) {
+			int d = Integer.parseInt(br.readLine());
+			//최대로 올 수 있는 값 max.
+			int max = 1;
+			
+			//교수님이 들어오자마자 끝내주는경우도 있다 했으니 작거나 같다.
+			while(max + (max * max) <= d) {
+				max++;
+			}
+			//범위 조절, -1해준다.
+			System.out.println((max - 1));
+		}
+	}
+
+}
