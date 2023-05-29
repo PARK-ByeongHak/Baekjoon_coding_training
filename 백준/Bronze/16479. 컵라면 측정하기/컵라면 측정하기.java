@@ -11,6 +11,6 @@ public class Main {
         double h = Math.sqrt(Math.pow(K, 2) - Math.pow((D1 - D2) / 2.0, 2));
         double result = Math.pow(h, 2);
 
-        System.out.println(result);
+        System.out.printf("%.6f",result);
     }
 }
